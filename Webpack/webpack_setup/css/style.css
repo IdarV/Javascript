@@ -1,3 +1,16 @@
-body {
-    background: yellow;
+body{
+    background-color: #343d46;
+}
+
+h1{
+    color: #cacaca;
+}
+
+section > div {
+    height: 100px;
+    width: 100px;
+    background-color: #cacaca;
+    float: left;
+    margin: 3px;
+    cursor: pointer;
 }

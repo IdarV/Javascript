@@ -44,10 +44,27 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	//document.write("It works.");
-	//require("!style!css!./style.css");
+	"use strict";
+
+	//import _ from "person.js";
+
 	__webpack_require__(1);
-	document.write(__webpack_require__(5));
+	//document.write(require("./content.js"));
+
+	var _loop = function _loop(i) {
+	    div = document.createElement('div');
+
+	    div.onclick = function () {
+	        alert("you clicked on box # " + i);
+	    };
+	    document.getElementsByTagName('section')[0].appendChild(div);
+	};
+
+	for (var i = 0; i < 45; i++) {
+	    var div;
+
+	    _loop(i);
+	}
 
 /***/ },
 /* 1 */
@@ -65,8 +82,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./node_modules/css-loader/index.js!./style.css", function() {
-				var newContent = require("!!./node_modules/css-loader/index.js!./../css/style.css");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./style.css", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./style.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -84,7 +101,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\r\n    background: yellow;\r\n}", ""]);
+	exports.push([module.id, "body{\r\n    background-color: #343d46;\r\n}\r\n\r\nh1{\r\n    color: #cacaca;\r\n}\r\n\r\nsection > div {\r\n    height: 100px;\r\n    width: 100px;\r\n    background-color: #cacaca;\r\n    float: left;\r\n    margin: 3px;\r\n    cursor: pointer;\r\n}", ""]);
 
 	// exports
 
@@ -397,13 +414,6 @@
 		if(oldSrc)
 			URL.revokeObjectURL(oldSrc);
 	}
-
-
-/***/ },
-/* 5 */
-/***/ function(module, exports) {
-
-	module.exports = "It works from content.js. and it really does";
 
 
 /***/ }
