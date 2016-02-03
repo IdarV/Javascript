@@ -1,1 +1,1 @@
-``` webpack ./entry.js bundle.js --module-bind 'css=style!css' ```
+run with ``` webpack  (--progress) (--colors) (--watch)  ```
