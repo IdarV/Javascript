@@ -49,7 +49,10 @@
 	//import _ from "person.js";
 
 	__webpack_require__(1);
+	//import Person from "./person.js";
 	//document.write(require("./content.js"));
+
+	// Example of "let"
 
 	var _loop = function _loop(i) {
 	    div = document.createElement('div');
@@ -65,6 +68,13 @@
 
 	    _loop(i);
 	}
+
+	// Example of template strings
+	function printHelloName(firstName) {
+	    console.log("Hello " + firstName);
+	}
+
+	printHelloName("Eric Cartman");
 
 /***/ },
 /* 1 */
